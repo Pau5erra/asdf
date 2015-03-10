@@ -1,0 +1,24 @@
+﻿Compilación iniciada a las 10/03/2015 12:51:17.
+     1>Proyecto "D:\Users\pausc1\Desktop\Programacio_II_Hernandez_David-master\Punto 2D_String\Project1.vcxproj" en el nodo 2 (Build destinos).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt LinkedList.cpp Log.cpp Main.cpp Point2D.cpp String.cpp
+         String.cpp
+     1>d:\users\pausc1\desktop\programacio_ii_hernandez_david-master\punto 2d_string\string.cpp(119): warning C4018: '>' : no coinciden signed/unsigned
+         Point2D.cpp
+         Main.cpp
+         Log.cpp
+         LinkedList.cpp
+     1>d:\users\pausc1\desktop\programacio_ii_hernandez_david-master\punto 2d_string\linkedlist.cpp(1): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+         Generando código...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\pausc1\Desktop\Programacio_II_Hernandez_David-master\Punto 2D_String\Debug\ProgII.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\pausc1\Desktop\Programacio_II_Hernandez_David-master\Punto 2D_String\Debug\ProgII.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\pausc1\Desktop\Programacio_II_Hernandez_David-master\Punto 2D_String\Debug\ProgII.lib" /MACHINE:X86 Debug\LinkedList.obj
+         Debug\Log.obj
+         Debug\Main.obj
+         Debug\Point2D.obj
+         Debug\String.obj
+         Project1.vcxproj -> D:\Users\pausc1\Desktop\Programacio_II_Hernandez_David-master\Punto 2D_String\Debug\ProgII.exe
+     1>Compilación del proyecto terminada "D:\Users\pausc1\Desktop\Programacio_II_Hernandez_David-master\Punto 2D_String\Project1.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:02.48
