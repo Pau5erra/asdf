@@ -21,4 +21,6 @@ public:
 	void Del(const node*);
 
 	unsigned int Count() const;
+
+	void delList();
 };

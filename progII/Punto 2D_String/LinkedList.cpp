@@ -75,3 +75,16 @@ unsigned int cSList::Count() const
 	}
 	return count;
 }
+
+void cSList::delList() { 
+	if (start != NULL){ 
+		node* tmp = start;
+		while (tmp->next != NULL){
+			node* tmp_2 = tmp;
+			tmp = tmp->next;
+			delete tmp_2;
+		}
+		delete tmp;
+		start = NULL;
+	}
+}
