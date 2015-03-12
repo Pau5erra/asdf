@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "Node.h"
 
-template < class TipoList>
+template < class T>
 
 class cSList
 {
 private:
-	Node<TipoList>* start;
+	Node<T>* start;
 
 public:
 	cSList()
@@ -14,13 +14,13 @@ public:
 
 	void Add(const int valor)
 	{
-		node *createdNode = new node();
+		Node<T> *createdNode = new node;
 		createdNode->value = valor;
 		createdNode->next = NULL;
 
 		if (start != NULL)
 		{
-			node* nextNode = start;
+			Node<T>* nextNode = start;
 			while (nextNode->next != NULL)
 			{
 				nextNode = nextNode->next;
@@ -33,11 +33,11 @@ public:
 		}
 	}
 
-	void AddAfter(const int valor, node* nAdd)
+	void AddAfter(const int valor, Node<T>* nAdd)
 	{
 		if (nAdd != NULL)
 		{
-			node *createdNode = new node();
+			Node<T> *createdNode = new node;
 			createdNode->value = valor;
 			if (start != NULL)
 			{
@@ -52,13 +52,13 @@ public:
 		}
 	}
 
-	void Del(const node* nDel)
+	void Del(const Node<T>* nDel)
 	{
 		if (nDel != NULL && start != NULL)
 		{
 			if (nDel != start)
 			{
-				node* nextNode = start;
+				Node<T>* nextNode = start;
 				while (nextNode->next != nDel)
 				{
 					nextNode = nextNode->next;
@@ -76,7 +76,7 @@ public:
 	unsigned int Count() const
 	{
 		unsigned int count = 0;
-		node* nextNode = start;
+		Node<T>* nextNode = start;
 
 		while (nextNode != NULL)
 		{
@@ -90,9 +90,9 @@ public:
 	void delList()
 	{
 		if (start != NULL){
-			node* tmp = start;
+			Node<T>* tmp = start;
 			while (tmp->next != NULL){
-				node* tmp_2 = tmp;
+				Node<T>* tmp_2 = tmp;
 				tmp = tmp->next;
 				delete tmp_2;
 			}

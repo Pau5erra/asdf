@@ -9,5 +9,7 @@
 
 int main()
 {
+
+	cSList<float> ps;
 	return 0;
 }
