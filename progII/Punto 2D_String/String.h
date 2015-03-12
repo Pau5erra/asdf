@@ -27,7 +27,7 @@ public:
 	//Métodes//
 	//////////
 
-	void Alloc(int);
+	void Alloc(int res);
 
 	void Clear();
 
