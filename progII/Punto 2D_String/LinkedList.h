@@ -5,16 +5,16 @@ template < class T>
 
 class cSList
 {
-private:
-	Node<T>* start;
 
 public:
+	Node<T>* start;
+
 	cSList()
 	{ start = NULL; }
 
-	void Add(const int valor)
+	void Add(const T valor)
 	{
-		Node<T> *createdNode = new node;
+		Node<T> *createdNode = new Node<T>;
 		createdNode->value = valor;
 		createdNode->next = NULL;
 
@@ -33,11 +33,11 @@ public:
 		}
 	}
 
-	void AddAfter(const int valor, Node<T>* nAdd)
+	void AddAfter(const T valor, Node<T>* nAdd)
 	{
 		if (nAdd != NULL)
 		{
-			Node<T> *createdNode = new node;
+			Node<T> *createdNode = new Node<T>;
 			createdNode->value = valor;
 			if (start != NULL)
 			{

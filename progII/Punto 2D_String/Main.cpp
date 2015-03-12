@@ -11,5 +11,9 @@ int main()
 {
 
 	cSList<float> ps;
+	
+	ps.Add(1);
+	ps.Add(2);
+	
 	return 0;
 }
