@@ -1,4 +1,4 @@
-#include "LinkedList.h";
+/*#include "LinkedList.h";
 
 cSList::cSList (){ start = NULL; }
 
@@ -76,7 +76,8 @@ unsigned int cSList::Count() const
 	return count;
 }
 
-void cSList::delList() { 
+void cSList::delList() 
+{ 
 	if (start != NULL){ 
 		node* tmp = start;
 		while (tmp->next != NULL){
@@ -87,4 +88,4 @@ void cSList::delList() {
 		delete tmp;
 		start = NULL;
 	}
-}
+}*/

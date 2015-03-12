@@ -1,26 +1,100 @@
 #include <stdio.h>
 
-struct node
-{
-	int value;
-	node* next;
-};
-
 class cSList
 {
 private:
 	node* start;
 
 public:
-	cSList();
+	cSList()
+	{ start = NULL; }
 
-	void Add(const int);
+	void Add(const int valor)
+	{
+		node *createdNode = new node();
+		createdNode->value = valor;
+		createdNode->next = NULL;
 
-	void AddAfter(const int, node*);
+		if (start != NULL)
+		{
+			node* nextNode = start;
+			while (nextNode->next != NULL)
+			{
+				nextNode = nextNode->next;
+			}
+			nextNode->next = createdNode;
+		}
+		else
+		{
+			start = createdNode;
+		}
+	}
 
-	void Del(const node*);
+	void AddAfter(const int valor, node* nAdd)
+	{
+		if (nAdd != NULL)
+		{
+			node *createdNode = new node();
+			createdNode->value = valor;
+			if (start != NULL)
+			{
+				createdNode->next = nAdd->next;
+				nAdd->next = createdNode;
+			}
+			else
+			{
+				start = createdNode;
+				createdNode->next = NULL;
+			}
+		}
+	}
 
-	unsigned int Count() const;
+	void Del(const node* nDel)
+	{
+		if (nDel != NULL && start != NULL)
+		{
+			if (nDel != start)
+			{
+				node* nextNode = start;
+				while (nextNode->next != nDel)
+				{
+					nextNode = nextNode->next;
+				}
+				nextNode->next = nDel->next;
+			}
+			else
+			{
+				start = start->next;
+			}
+			delete nDel;
+		}
+	}
 
-	void delList();
+	unsigned int Count() const
+	{
+		unsigned int count = 0;
+		node* nextNode = start;
+
+		while (nextNode != NULL)
+		{
+			nextNode = nextNode->next;
+			count++;
+		}
+		return count;
+	}
+
+
+	void delList()
+	{
+		if (start != NULL){
+			node* tmp = start;
+			while (tmp->next != NULL){
+				node* tmp_2 = tmp;
+				tmp = tmp->next;
+				delete tmp_2;
+			}
+			delete tmp;
+			start = NULL;
+		}
+	}
 };
