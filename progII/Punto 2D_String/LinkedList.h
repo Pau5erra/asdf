@@ -1,9 +1,12 @@
 #include <stdio.h>
+#include "Node.h"
+
+template < class TipoList>
 
 class cSList
 {
 private:
-	node* start;
+	Node<TipoList>* start;
 
 public:
 	cSList()
